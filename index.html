@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Jar — Fresh Home Bakery in Sattur | Custom Cakes & Brownies</title>
+  <meta name="description" content="Cookie Jar is a beloved home bakery in Sattur, Tamil Nadu. Freshly baked fudgy brownies, custom birthday cakes, artisanal cookies & savory snacks. Order via WhatsApp!">
+  <meta name="keywords" content="Cookie Jar Sattur, home bakery Sattur, custom cakes Sattur, brownies Sattur, eggless cakes Sattur">
+  <meta property="og:title" content="Cookie Jar — Home Bakery, Sattur">
+  <meta property="og:description" content="Small-batch brownies, custom birthday cakes, and artisanal treats made fresh in Sattur. Order on WhatsApp with ease!">
+  <meta property="og:image" content="assets/cake.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#3B2417">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+
+  <!-- LocalBusiness / Bakery Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Cookie Jar",
+    "image": "assets/cake.jpg",
+    "description": "Artisanal home bakery in Sattur specializing in fudgy brownies, custom birthday cakes, and savory treats.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sattur",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "9.3639",
+      "longitude": "77.9256"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "servesCuisine": ["Bakery", "Desserts", "Cakes"],
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "18"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <nav class="wrap">
+      <div class="brand">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="#3B2417"/>
+          <path d="M12 24c0-6 3-10 8-10s8 4 8 10-3 7-8 7-8-1-8-7Z" fill="#E3A857"/>
+          <circle cx="16" cy="21" r="1.4" fill="#3B2417"/>
+          <circle cx="22" cy="19" r="1.2" fill="#3B2417"/>
+          <circle cx="19" cy="25" r="1.3" fill="#3B2417"/>
+        </svg>
+        <span>Cookie Jar</span>
+      </div>
+
+      <div class="navlinks">
+        <a href="#menu">Menu</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#custom">Custom Cakes</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQs</a>
+        <a href="#visit">Visit</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-cta" id="navOrderBtn" type="button">Order Now</button>
+        <button class="navtoggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#menu">Menu</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#custom">Custom Cakes</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQs</a>
+        <a href="#visit">Visit</a>
+        <button class="btn btn-primary" id="mobileOrderBtn" style="margin-top:8px;width:100%;text-align:center;">Customize Order (WhatsApp)</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="hero-eyebrow label">
+          <span class="dot"></span>Home Bakery • Sattur, Tamil Nadu
+        </div>
+        <h1>Fresh from<br>our <em>jar</em> to<br>your table</h1>
+        <p class="sub">Fudgy brownies, custom celebration cakes and Sattur favourites — baked in small batches with pure butter & love, just the way a home kitchen should.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="heroOrderBtn">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Build WhatsApp Order
+          </button>
+          <a href="#menu" class="btn btn-ghost">See the Menu</a>
+        </div>
+        <div class="dietary-pill">
+          <span class="badge-eggless">🌿 100% Eggless Options Available</span>
+          <span class="badge-pure">🧈 Pure Butter & Fresh Ingredients</span>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4.6 / 5</strong><span>Google rating</span></div>
+          <div><strong>100%</strong><span>Made to order</span></div>
+          <div><strong>Kid</strong><span>friendly bakes</span></div>
+        </div>
+      </div>
+
+      <div class="jar-stage">
+        <svg class="float" viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Freshly baked Cookie Jar illustration">
+          <ellipse cx="180" cy="400" rx="100" ry="12" fill="#000" opacity="0.25"/>
+          <!-- steam -->
+          <path class="steam" d="M140 70 q-8 -14 0 -28" stroke="#FFF8ED" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+          <path class="steam d2" d="M180 62 q-8 -14 0 -28" stroke="#FFF8ED" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+          <path class="steam d3" d="M220 70 q-8 -14 0 -28" stroke="#FFF8ED" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.5"/>
+          <!-- jar lid -->
+          <rect x="120" y="78" width="120" height="26" rx="10" fill="#B83A5A"/>
+          <rect x="112" y="98" width="136" height="18" rx="9" fill="#D94F70"/>
+          <!-- jar body -->
+          <path d="M118 116 h124 l-10 240 a20 20 0 0 1 -20 18 h-64 a20 20 0 0 1 -20 -18 z" fill="#FFF8ED" opacity="0.14" stroke="#FFF8ED" stroke-width="3"/>
+          <path d="M118 116 h124 l-10 240 a20 20 0 0 1 -20 18 h-64 a20 20 0 0 1 -20 -18 z" fill="url(#glass)" />
+          <defs>
+            <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFF8ED" stop-opacity="0.06"/>
+              <stop offset="100%" stop-color="#FFF8ED" stop-opacity="0.02"/>
+            </linearGradient>
+          </defs>
+          <!-- cookies inside -->
+          <circle cx="150" cy="300" r="22" fill="#C6863A"/>
+          <circle cx="150" cy="300" r="22" fill="none" stroke="#8A5A24" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="200" cy="310" r="24" fill="#E3A857"/>
+          <circle cx="178" cy="260" r="20" fill="#B87333"/>
+          <circle cx="146" cy="292" r="2.4" fill="#3B2417"/>
+          <circle cx="160" cy="308" r="2.2" fill="#3B2417"/>
+          <circle cx="196" cy="304" r="2.4" fill="#3B2417"/>
+          <circle cx="208" cy="316" r="2.2" fill="#3B2417"/>
+          <circle cx="174" cy="256" r="2.2" fill="#3B2417"/>
+          <circle cx="184" cy="266" r="2.2" fill="#3B2417"/>
+          <!-- label sticker -->
+          <g transform="translate(180,200) rotate(-4)">
+            <circle r="46" fill="#FFF8ED"/>
+            <circle r="46" fill="none" stroke="#B83A5A" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="0" y="-6" text-anchor="middle" font-family="Space Mono, monospace" font-size="10" fill="#3B2417" letter-spacing="1">EST. SATTUR</text>
+            <text x="0" y="12" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="15" fill="#D94F70">Cookie Jar</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE BANNER -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>• Fudgy Brownies</span><span>• Custom Birthday Cakes</span><span>• Palkova Pal</span><span>• Crispy Cheese Balls</span><span>• 100% Eggless Options</span><span>• Sattur Doorstep Delivery</span>
+      <span>• Fudgy Brownies</span><span>• Custom Birthday Cakes</span><span>• Palkova Pal</span><span>• Crispy Cheese Balls</span><span>• 100% Eggless Options</span><span>• Sattur Doorstep Delivery</span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS TIMELINE -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head text-center">
+        <span class="label">Simple 3-Step Process</span>
+        <h2>How Ordering Works</h2>
+        <p>From our oven to your celebration — freshly baked to your preferences.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">🎂</div>
+          <h3>Pick Your Treat</h3>
+          <p>Choose from our fudgy brownies, celebration cakes, cookie jars, or savoury cheese balls. Eggless options available for all!</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">💬</div>
+          <h3>Customize on WhatsApp</h3>
+          <p>Use our Order Builder to choose your flavor, size, custom wording, and delivery date. We finalize every small detail with you.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">✨</div>
+          <h3>Freshly Baked for You</h3>
+          <p>We bake in small batches right on schedule. Collect at our Sattur kitchen or get it hand-delivered locally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="about-card">
+        <div class="tag-pin">Our story</div>
+        <p class="label" style="color:var(--sage)">A jar that grew into a kitchen</p>
+        <p>Cookie Jar started the way most good bakeries do — a home baker in Sattur, one oven, and a habit of never saying no to a last-minute birthday order. Today the same care goes into every brownie tray and cake board that leaves the kitchen.</p>
+      </div>
+      <div class="about-copy">
+        <span class="label" style="color:var(--raspberry)">Why people keep coming back</span>
+        <h2>Small-batch bakes,<br>big on flavour.</h2>
+        <p>Customers keep pointing to the same things in their reviews: rich, fudgy brownies, cakes customised exactly the way they pictured them, and prices that don't ask you to think twice before ordering for the kids.</p>
+        <p>Every cake is made to order — flavour, size and design worked out with you, not picked off a shelf.</p>
+        <div class="about-facts">
+          <div><strong>Made to order</strong><span>No pre-baked stock</span></div>
+          <div><strong>Kid-friendly</strong><span>Loved at birthday parties</span></div>
+          <div><strong>Local favourite</strong><span>4.6★ across 18 reviews</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION WITH CATEGORY FILTER -->
+  <section id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">On the counter</span>
+        <h2>A few things worth<br>ordering twice</h2>
+        <p>The lineup customers ask for by name — baked fresh daily with customizable sweetness and dietary preferences.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="menu-filters" role="tablist" aria-label="Menu category filters">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Items</button>
+        <button class="filter-btn" data-filter="brownies" role="tab" aria-selected="false">Brownies & Cookies</button>
+        <button class="filter-btn" data-filter="cakes" role="tab" aria-selected="false">Celebration Cakes</button>
+        <button class="filter-btn" data-filter="savory" role="tab" aria-selected="false">Local & Savory</button>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Item 1: Brownies -->
+        <div class="menu-card menu-card-photo" data-category="brownies" data-item-id="brownies">
+          <div class="card-thumb" style="background-image: url('assets/brownies.jpg');">
+            <span class="tag-badge">Bestseller</span>
+          </div>
+          <div class="card-details">
+            <div class="card-tags">
+              <span class="dietary-tag">🌿 Eggless Option</span>
+              <span class="dietary-tag">🍫 Pure Belgian Cocoa</span>
+            </div>
+            <h3>Fudgy Brownie Box</h3>
+            <p>Rich, dense and the most-loved item on the counter. Crispy shiny crinkle top with a molten fudgy core.</p>
+            <div class="card-bottom">
+              <div class="price">Boxes of 4 / 6 / 9 • From ₹280</div>
+              <button class="btn-card-order" data-order-item="brownies">Customize & Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Custom Cakes -->
+        <div class="menu-card menu-card-photo accent-card" data-category="cakes" data-item-id="cake">
+          <div class="card-thumb" style="background-image: url('assets/cake.jpg');">
+            <span class="tag-badge" style="background:var(--caramel);color:var(--cocoa-deep);">Custom Design</span>
+          </div>
+          <div class="card-details">
+            <div class="card-tags">
+              <span class="dietary-tag">🌿 Eggless Option</span>
+              <span class="dietary-tag">🎉 Any Theme</span>
+            </div>
+            <h3>Custom Birthday Cakes</h3>
+            <p>Tell us the flavour, theme, and age — we'll build the cake around it with fresh buttercream piping and tiers.</p>
+            <div class="card-bottom">
+              <div class="price">0.5kg / 1kg / 2kg • From ₹450</div>
+              <button class="btn-card-order" data-order-item="cake">Customize & Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Artisanal Cookies -->
+        <div class="menu-card menu-card-photo" data-category="brownies" data-item-id="cookies">
+          <div class="card-thumb" style="background-image: url('assets/cookies.jpg');">
+            <span class="tag-badge">Fresh Batch</span>
+          </div>
+          <div class="card-details">
+            <div class="card-tags">
+              <span class="dietary-tag">🌿 100% Butter</span>
+              <span class="dietary-tag">🍪 Crisp & Chewy</span>
+            </div>
+            <h3>Cookie Jar Assortment</h3>
+            <p>Generously studded chocolate chip, salted butter, and jam drop cookies baked golden brown every morning.</p>
+            <div class="card-bottom">
+              <div class="price">Pack of 6 / 12 • From ₹220</div>
+              <button class="btn-card-order" data-order-item="cookies">Customize & Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Cheese Balls -->
+        <div class="menu-card menu-card-photo caramel-theme" data-category="savory" data-item-id="cheeseballs">
+          <div class="card-thumb" style="background-image: url('assets/cheeseballs.jpg');">
+            <span class="tag-badge">Savory Hit</span>
+          </div>
+          <div class="card-details">
+            <div class="card-tags">
+              <span class="dietary-tag">🧀 Real Cheddar</span>
+              <span class="dietary-tag">👶 Kid Favorite</span>
+            </div>
+            <h3>Crispy Cheese Balls</h3>
+            <p>Crisp outside with molten, stretchy cheese inside — the irresistible savory bite alongside every sweet order.</p>
+            <div class="card-bottom">
+              <div class="price">Platters of 10 / 20 • From ₹180</div>
+              <button class="btn-card-order" data-order-item="cheeseballs">Customize & Order</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Palkova Pal -->
+        <div class="menu-card menu-card-photo" data-category="savory" data-item-id="palkova">
+          <div class="card-thumb" style="background-color:#E3A857;display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 40 40" width="56" height="56" fill="none">
+              <circle cx="20" cy="20" r="18" fill="#FFF8ED" opacity="0.9"/>
+              <path d="M12 24c0-6 3-10 8-10s8 4 8 10-3 7-8 7-8-1-8-7Z" fill="#B83A5A"/>
+            </svg>
+            <span class="tag-badge" style="background:var(--cocoa);color:var(--cream);">Sattur Special</span>
+          </div>
+          <div class="card-details">
+            <div class="card-tags">
+              <span class="dietary-tag">🥛 Slow Simmered</span>
+              <span class="dietary-tag">🍯 House Recipe</span>
+            </div>
+            <h3>Traditional Palkova Pal</h3>
+            <p>A house specialty — caramelised rich milk sweet crafted the authentic way that reviewers call "super tasty".</p>
+            <div class="card-bottom">
+              <div class="price">250g / 500g Boxes • From ₹200</div>
+              <button class="btn-card-order" data-order-item="palkova">Customize & Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY / CUSTOM CAKES SHOWCASE -->
+  <section class="custom" id="custom">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">Made to order</span>
+        <h2>Every custom bake<br>starts with a conversation</h2>
+        <p>Share a reference photo, a party theme or your preferred flavour — we personalize every element before baking.</p>
+      </div>
+
+      <div class="photo-gallery">
+        <div class="gallery-card" data-order-item="cake">
+          <img src="assets/cake.jpg" alt="Custom floral birthday celebration cake" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-pill">Custom Cakes</span>
+            <h4>Birthday & Milestone Tiers</h4>
+            <p>Buttercream florals, character themes, and custom toppers.</p>
+            <span class="gallery-cta">Tap to Inquire →</span>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-order-item="brownies">
+          <img src="assets/brownies.jpg" alt="Box of fresh chocolate fudge brownies" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-pill">Fudge Brownies</span>
+            <h4>Gift Boxes & Party Treats</h4>
+            <p>Deep cocoa indulgence packed in rustic gift boxes.</p>
+            <span class="gallery-cta">Tap to Inquire →</span>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-order-item="cookies">
+          <img src="assets/cookies.jpg" alt="Handcrafted cookie jar assortment" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-pill">Artisan Cookies</span>
+            <h4>Cookie Jar Assortments</h4>
+            <p>Chocolate chip, butter shortbread, and holiday editions.</p>
+            <span class="gallery-cta">Tap to Inquire →</span>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-order-item="cheeseballs">
+          <img src="assets/cheeseballs.jpg" alt="Golden crispy cheese balls platter" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-pill">Savory Bestseller</span>
+            <h4>Crispy Cheese Ball Platters</h4>
+            <p>Hot, gooey & savory sidekick for party birthdays.</p>
+            <span class="gallery-cta">Tap to Inquire →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="label">What Sattur is saying</span>
+        <h2>Straight from Google Reviews</h2>
+      </div>
+
+      <div class="rating-banner">
+        <div>
+          <div class="num">4.6<span style="font-size:20px;">/5</span></div>
+          <div class="num-sub">Based on 18 Google reviews in Sattur</div>
+        </div>
+        <div style="display:flex;gap:28px;flex-wrap:wrap;">
+          <div><strong style="font-family:'Fraunces',serif;font-size:20px;">Brownies</strong><div class="num-sub">Most mentioned</div></div>
+          <div><strong style="font-family:'Fraunces',serif;font-size:20px;">Custom Cakes</strong><div class="num-sub">Most requested</div></div>
+          <div><strong style="font-family:'Fraunces',serif;font-size:20px;">Kid-friendly</strong><div class="num-sub">Frequently praised</div></div>
+        </div>
+      </div>
+
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>Called the brownies rich and fudgy, and said every item on the menu had its own flavour worth trying.</p>
+          <div class="reviewer">
+            <div class="avatar">N</div>
+            <div><strong>Naga Raj</strong><span>Google review</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>Ordered a cake for her baby's first birthday and described it as the lowest price for the highest satisfaction.</p>
+          <div class="reviewer">
+            <div class="avatar">A</div>
+            <div><strong>Ak</strong><span>Local Guide • Google review</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>Highlighted the wide range of desserts at reasonable prices, with fresh customised cakes in any flavour.</p>
+          <div class="reviewer">
+            <div class="avatar">A</div>
+            <div><strong>Antro Claflin</strong><span>Local Guide • Google review</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>Said her customised birthday cake looked great and tasted delicious, calling it one of the most recommended shops in Sattur.</p>
+          <div class="reviewer">
+            <div class="avatar">S</div>
+            <div><strong>Sivasankari</strong><span>Google review</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>Called the brownies and cakes the best, and noted the shop is genuinely kid-friendly.</p>
+          <div class="reviewer">
+            <div class="avatar">A</div>
+            <div><strong>Anbu Eneoji</strong><span>Google review</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>Praised how fresh and delicious everything was, singling out the brownie, palkova pal and cheese ball.</p>
+          <div class="reviewer">
+            <div class="avatar">M</div>
+            <div><strong>Mahendran G.</strong><span>Local Guide • Google review</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="wrap">
+      <div class="section-head text-center">
+        <span class="label">Got Questions?</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about our home kitchen, orders, and delivery in Sattur.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How much advance notice is needed for custom cakes?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>For custom themed or tiered cakes, we recommend ordering at least <strong>24 to 48 hours in advance</strong> so we can prepare your custom design with the utmost care. For brownie boxes and cookie jars, same-day orders are often fulfilled depending on our baking batch!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do you offer 100% Eggless options?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, absolutely! Most of our items — including our fudgy brownies, celebration cakes, and cookies — can be prepared <strong>100% eggless</strong> upon request without compromising on texture or rich taste.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does delivery or pickup work in Sattur?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>You can pick up your fresh order directly from our home kitchen in Sattur, or request local doorstep delivery within Sattur town. We ensure careful handling so delicate cakes arrive in picture-perfect condition.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I send my own cake design or reference photo?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Definitely! You can share any Pinterest photo, Instagram reel, or party invitation theme on WhatsApp. We will discuss colors, weight, and flavor combinations to match your celebration vision.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What payment methods are accepted?</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>We accept all instant UPI payment methods (Google Pay, PhonePe, Paytm, BHIM UPI) as well as cash upon pickup.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" id="visit">
+    <div class="wrap">
+      <span class="label" style="color:rgba(255,248,237,0.85)">Get in touch</span>
+      <h2>Planning a celebration?<br>Let's talk cake.</h2>
+      <p>Message us with the date, the flavour you're picturing and roughly how many you're feeding — we'll take it from there.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <button class="btn btn-primary" id="ctaOrderBtn">Open WhatsApp Order Builder</button>
+        <a href="tel:+919876543210" class="btn btn-ghost">Call the Kitchen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">
+            <svg viewBox="0 0 40 40" width="30" height="30" fill="none" aria-hidden="true">
+              <circle cx="20" cy="20" r="19" fill="#E3A857"/>
+              <path d="M12 24c0-6 3-10 8-10s8 4 8 10-3 7-8 7-8-1-8-7Z" fill="#3B2417"/>
+            </svg>
+            <span>Cookie Jar</span>
+          </div>
+          <p style="max-width:280px;">A home bakery in Sattur serving fresh brownies, custom cakes, and artisanal local favourites, made to order.</p>
+          <div class="payment-badges" style="margin-top:14px;display:flex;gap:8px;font-size:12px;color:var(--caramel);">
+            <span>✓ GPay</span> • <span>✓ PhonePe</span> • <span>✓ Cash on Pickup</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Location & Hours</h4>
+          <p>Sattur, Tamil Nadu 626203</p>
+          <p><strong>Open Daily:</strong> 9:00 AM – 9:00 PM</p>
+          <p><a href="https://maps.google.com/?q=Sattur+Tamil+Nadu" target="_blank" rel="noopener" style="text-decoration:underline;">View on Google Maps ↗</a></p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <a href="#menu">Browse Menu</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#custom">Custom Cakes</a>
+          <a href="#faq">Frequently Asked Questions</a>
+          <a href="tel:+919876543210">Call: +91 98765 43210</a>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <span>© <span id="year"></span> Cookie Jar, Sattur. All rights reserved.</span>
+        <span>Baked fresh, ordered simple.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE WHATSAPP ORDER BUILDER MODAL -->
+  <div class="order-modal-backdrop" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none;">
+    <div class="order-modal-card">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close Order Builder">&times;</button>
+      
+      <div class="modal-head">
+        <span class="label" style="color:var(--raspberry);">WhatsApp Order Builder</span>
+        <h3 id="modalTitle">Customize Your Bake</h3>
+        <p>Pick your items and options below. We will format a clean WhatsApp message for you!</p>
+      </div>
+
+      <form id="orderForm" class="modal-form">
+        <!-- Item Selection -->
+        <div class="form-group">
+          <label for="orderItemSelect">Choose Item</label>
+          <select id="orderItemSelect" class="form-control">
+            <option value="brownies">Fudgy Brownie Box</option>
+            <option value="cake">Custom Celebration Cake</option>
+            <option value="cookies">Cookie Jar Assortment</option>
+            <option value="cheeseballs">Crispy Cheese Balls</option>
+            <option value="palkova">Traditional Palkova Pal</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <!-- Size / Portion -->
+          <div class="form-group">
+            <label for="orderSizeSelect">Size / Quantity</label>
+            <select id="orderSizeSelect" class="form-control">
+              <!-- Dynamically populated -->
+            </select>
+          </div>
+
+          <!-- Flavor Selection -->
+          <div class="form-group">
+            <label for="orderFlavorSelect">Flavor / Variety</label>
+            <select id="orderFlavorSelect" class="form-control">
+              <!-- Dynamically populated -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Eggless Toggle -->
+        <div class="form-group checkbox-group">
+          <label class="toggle-container" for="egglessToggle">
+            <input type="checkbox" id="egglessToggle">
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">🌿 Make this 100% Eggless</span>
+          </label>
+        </div>
+
+        <!-- Custom Message on Cake / Notes -->
+        <div class="form-group">
+          <label for="orderMessageInput">Message on Cake or Box Note <small>(Optional)</small></label>
+          <input type="text" id="orderMessageInput" class="form-control" placeholder="e.g. 'Happy 5th Birthday Aarav!'">
+        </div>
+
+        <div class="form-row">
+          <!-- Date -->
+          <div class="form-group">
+            <label for="orderDateInput">Needed Date</label>
+            <input type="date" id="orderDateInput" class="form-control" required>
+          </div>
+
+          <!-- Customer Name -->
+          <div class="form-group">
+            <label for="customerNameInput">Your Name</label>
+            <input type="text" id="customerNameInput" class="form-control" placeholder="e.g. Priyan" required>
+          </div>
+        </div>
+
+        <!-- Estimate Banner -->
+        <div class="price-estimate-banner">
+          <div>
+            <span class="estimate-label">Approximate Estimate</span>
+            <div class="estimate-value" id="priceEstimateDisplay">₹280 - ₹350</div>
+          </div>
+          <small class="estimate-note">*Final price confirmed on WhatsApp</small>
+        </div>
+
+        <!-- Submit to WhatsApp -->
+        <button type="submit" class="btn btn-whatsapp-submit">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          Send Order via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP QUICK CHAT WIDGET -->
+  <aside class="floating-wa" id="floatingWa">
+    <div class="floating-tooltip">💬 Craving fresh bakes? Chat with us!</div>
+    <button class="floating-wa-btn" id="floatingWaBtn" aria-label="Open WhatsApp chat or order">
+      <span class="wa-pulse"></span>
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="#FFF8ED">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </button>
+  </aside>
+
+</body>
+</html>

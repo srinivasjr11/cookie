@@ -1,0 +1,11 @@
+{
+  "name": "cookie-jar",
+  "version": "1.0.0",
+  "description": "Cookie Jar - Home Bakery landing page in Sattur",
+  "scripts": {
+    "build": "npx -p typescript tsc --ignoreConfig main.ts --target ES2022 --module ESNext"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
